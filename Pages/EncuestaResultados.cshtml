@@ -1,0 +1,41 @@
+﻿@page
+@model EncuestaWeb.Pages.EncuestaResultadosModel
+@{
+    ViewData["Title"] = "Resultados de la Encuesta";
+}
+
+<h2>Resultados de la Encuesta</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Facultad</th>
+            <th>Escuela Académico Profesional</th>
+            <th>Año Académico</th>
+            <th>Género</th>
+            <th>Año de Nacimiento</th>
+            <th>Estado de Vivienda</th>
+            <th>Planes de Vivienda</th>
+            <th>Planes a Futuro</th>
+            <th>Tiempo para Encontrar Trabajo</th>
+            <th>Ingreso Anual</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var encuesta in Model.Encuestas)
+        {
+            <tr>
+                <td>@encuesta.Facultad</td>
+                <td>@encuesta.EscuelaProfesional</td>
+                <td>@encuesta.AñoAcademico</td>
+                <td>@encuesta.Genero</td>
+                <td>@encuesta.AñoNacimiento</td>
+                <td>@encuesta.EstadoVivienda</td>
+                <td>@encuesta.PlanesVivienda</td>
+                <td>@encuesta.PlanesFuturosEducacion</td>
+                <td>@encuesta.TiempoParaEncontrarTrabajo</td>
+                <td>@encuesta.IngresoAnual</td>
+            </tr>
+        }
+    </tbody>
+</table>

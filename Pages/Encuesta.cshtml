@@ -1,0 +1,126 @@
+﻿@page
+@model EncuestaWeb.Encuesta
+@{
+    ViewData["Title"] = "Encuesta de salida de la universidad";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Facultad">Facultad en la que estudia</label>
+        <select asp-for="Facultad" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>Ingeniería</option>
+            <option>Cs. de la salud</option>
+            <option>Educación</option>
+            <option>Medicina</option>
+            <option>Derecho</option>
+        </select>
+        <span asp-validation-for="Facultad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EscuelaProfesional">Escuela Académico Profesional</label>
+        <input asp-for="EscuelaProfesional" class="form-control" />
+        <span asp-validation-for="EscuelaProfesional" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AñoAcademico">Año académico en el que se encuentra actualmente</label>
+        <select asp-for="AñoAcademico" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>1° Año</option>
+            <option>2° Año</option>
+            <option>3° Año</option>
+            <option>4° Año</option>
+            <option>5° Año</option>
+        </select>
+        <span asp-validation-for="AñoAcademico" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Genero">Género con el que se identifica</label>
+        <select asp-for="Genero" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>Femenino</option>
+            <option>Masculino</option>
+            <option>Otro</option>
+        </select>
+        <span asp-validation-for="Genero" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AñoNacimiento">Año de nacimiento</label>
+        <input asp-for="AñoNacimiento" class="form-control" type="number" />
+        <span asp-validation-for="AñoNacimiento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EstadoVivienda">¿Cuál es su estado actual de vivienda?</label>
+        <select asp-for="EstadoVivienda" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>Domicilio con sus padres</option>
+            <option>Rentando apartamento</option>
+            <option>Residencia universitaria</option>
+        </select>
+        <span asp-validation-for="EstadoVivienda" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PlanesVivienda">¿Cuáles son sus planes de vivienda en el futuro cercano?</label>
+        <select asp-for="PlanesVivienda" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>Viviendo con sus padres</option>
+            <option>Vivir en un apartamento (no con los padres)</option>
+            <option>Otro</option>
+        </select>
+        <span asp-validation-for="PlanesVivienda" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PlanesFuturosEducacion">¿Cuáles son sus planes a futuro con respecto la educación y la carrera?</label>
+        <select asp-for="PlanesFuturosEducacion" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>Continuar con la educación superior (posgrado)</option>
+            <option>Continuar con la educación superior y trabajando</option>
+            <option>Trabajando a tiempo parcial</option>
+            <option>Trabajando a tiempo completo</option>
+            <option>Hacer una pasantía</option>
+            <option>Participar en actividades de voluntariado</option>
+            <option>Otro</option>
+        </select>
+        <span asp-validation-for="PlanesFuturosEducacion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TiempoParaEncontrarTrabajo">¿Cuánto tiempo después de la graduación considera que tomaría encontrar un trabajo?</label>
+        <select asp-for="TiempoParaEncontrarTrabajo" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>Menos de un mes</option>
+            <option>Dos o tres meses</option>
+            <option>Cuatro a seis meses</option>
+            <option>Siete meses a un año</option>
+            <option>Más de un año</option>
+            <option>Ya tenía trabajo antes de la graduación</option>
+        </select>
+        <span asp-validation-for="TiempoParaEncontrarTrabajo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="IngresoAnual">Según sus estimaciones, ¿Cuál sería su ingreso anual aproximado en el futuro cercano?</label>
+        <select asp-for="IngresoAnual" class="form-control">
+            <option value="">Seleccione una opción</option>
+            <option>menos de $20,000</option>
+            <option>$20,000 - $39,999</option>
+            <option>$40,000 - $59,999</option>
+            <option>$60,000 - $79,000</option>
+            <option>$80,000 o más</option>
+        </select>
+        <span asp-validation-for="IngresoAnual" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>

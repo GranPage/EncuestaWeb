@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1 class="mt-5">Hola,</h1>
+            <p class="lead">
+                Estás invitado a participar en nuestra <strong>Encuesta de salida de la universidad</strong>.
+            </p>
+            <p>
+                El propósito de este cuestionario es obtener su opinión sobre su situación actual y sus planes de carrera y educación superior. La finalización tomará aproximadamente 15 minutos.
+            </p>
+            <p>
+                Por favor, tómese unos minutos para reflexionar sobre cada pregunta abordada y trate de ser lo más sincero posible. Sus respuestas serán confidenciales y solo se utilizarán para encontrar formas de mejorar nuestros servicios educativos y brindarle un mejor apoyo en el futuro.
+            </p>
+            <p>
+                Puede comenzar con la encuesta haciendo clic en el botón "Continuar" a continuación.
+            </p>
+            <a class="btn btn-primary btn-lg" asp-page="/Encuesta">Continuar</a>
+            <p class="mt-3">¡Gracias por su cooperación!</p>
+        </div>
+    </div>
+</div>
